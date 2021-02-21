@@ -1,4 +1,4 @@
-package com.sml.heyst;
+package aaa.sml.heyst;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
