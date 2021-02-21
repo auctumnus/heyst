@@ -1,5 +1,6 @@
 package aaa.sml.heyst;
 
+import aaa.sml.heyst.util.RegistryHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -14,10 +15,13 @@ import java.util.stream.Collectors;
 public class Heyst
 {
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final String MOD_ID = "heyst";
 
     public Heyst() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        RegistryHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
